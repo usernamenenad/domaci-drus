@@ -1,0 +1,14 @@
+C:\Users\neso\Desktop\Service\Service\bin\Service.dll.config
+C:\Users\neso\Desktop\Service\Service\bin\Service.dll
+C:\Users\neso\Desktop\Service\Service\bin\Service.pdb
+C:\Users\neso\Desktop\Service\Service\obj\Debug\Service.csproj.AssemblyReference.cache
+C:\Users\neso\Desktop\Service\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+C:\Users\neso\Desktop\Service\Service\obj\Debug\Service.dll
+C:\Users\neso\Desktop\Service\Service\obj\Debug\Service.pdb
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Service\bin\Service.dll.config
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Service\bin\Service.dll
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Service\bin\Service.pdb
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Service\obj\Debug\Service.csproj.AssemblyReference.cache
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Service\obj\Debug\Service.dll
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Service\obj\Debug\Service.pdb

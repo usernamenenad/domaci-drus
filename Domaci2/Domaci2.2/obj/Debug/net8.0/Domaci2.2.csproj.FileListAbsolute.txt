@@ -1,0 +1,42 @@
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.exe
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.deps.json
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.runtimeconfig.json
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.dll
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.pdb
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.AssemblyInfoInputs.cache
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.AssemblyInfo.cs
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.csproj.CoreCompileInputs.cache
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.dll
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\obj\Debug\net8.0\refint\Domaci2.2.dll
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.pdb
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.genruntimeconfig.cache
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\Domaci2.2\obj\Debug\net8.0\ref\Domaci2.2.dll
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.exe
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.deps.json
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.runtimeconfig.json
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.dll
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.pdb
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.AssemblyInfoInputs.cache
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.AssemblyInfo.cs
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.csproj.CoreCompileInputs.cache
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.dll
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\obj\Debug\net8.0\refint\Domaci2.2.dll
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.pdb
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.genruntimeconfig.cache
+C:\Users\neso\Desktop\Domaci2\Domaci2.2\obj\Debug\net8.0\ref\Domaci2.2.dll
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.exe
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.deps.json
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.runtimeconfig.json
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.dll
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\bin\Debug\net8.0\Domaci2.2.pdb
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.AssemblyInfoInputs.cache
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.AssemblyInfo.cs
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.csproj.CoreCompileInputs.cache
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.dll
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\obj\Debug\net8.0\refint\Domaci2.2.dll
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.pdb
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\obj\Debug\net8.0\Domaci2.2.genruntimeconfig.cache
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci2\Domaci2.2\obj\Debug\net8.0\ref\Domaci2.2.dll

@@ -1,0 +1,21 @@
+C:\Users\neso\Desktop\Service\Client\bin\Debug\net472\Client.exe.config
+C:\Users\neso\Desktop\Service\Client\bin\Debug\net472\Client.exe
+C:\Users\neso\Desktop\Service\Client\bin\Debug\net472\Client.pdb
+C:\Users\neso\Desktop\Service\Client\obj\Debug\net472\Client.csproj.AssemblyReference.cache
+C:\Users\neso\Desktop\Service\Client\obj\Debug\net472\Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neso\Desktop\Service\Client\obj\Debug\net472\Client.AssemblyInfoInputs.cache
+C:\Users\neso\Desktop\Service\Client\obj\Debug\net472\Client.AssemblyInfo.cs
+C:\Users\neso\Desktop\Service\Client\obj\Debug\net472\Client.csproj.CoreCompileInputs.cache
+C:\Users\neso\Desktop\Service\Client\obj\Debug\net472\Client.exe
+C:\Users\neso\Desktop\Service\Client\obj\Debug\net472\Client.pdb
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Client\bin\Debug\net472\Client.exe.config
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Client\bin\Debug\net472\Client.exe
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Client\bin\Debug\net472\Client.pdb
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Client\obj\Debug\net472\Client.csproj.AssemblyReference.cache
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Client\obj\Debug\net472\Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Client\obj\Debug\net472\Client.AssemblyInfoInputs.cache
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Client\obj\Debug\net472\Client.AssemblyInfo.cs
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Client\obj\Debug\net472\Client.csproj.CoreCompileInputs.cache
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Client\obj\Debug\net472\Client.sourcelink.json
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Client\obj\Debug\net472\Client.exe
+C:\Users\neso\Desktop\Files\Fakultet\1. SEMESTAR\Distribuirani računarski sistemi\Domaci\Domaci3\Service\Client\obj\Debug\net472\Client.pdb

@@ -1,0 +1,18 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "http://localhost:55637/Service.svc"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "enableDataBinding": true,
+    "namespaceMappings": [
+      "*, ServiceReference"
+    ],
+    "sync": true,
+    "targetFramework": "net472",
+    "typeReuseMode": "None"
+  }
+}

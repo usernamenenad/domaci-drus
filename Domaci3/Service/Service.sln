@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{A7566FD1-6028-47CF-B449-AF0F0F320643}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{63AF223A-1B45-47D6-A23E-8C9F244B68FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotoMachine", "LotoMachine\LotoMachine.csproj", "{DB593DAC-E9B5-41C3-B39B-019EB5F7D3C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7566FD1-6028-47CF-B449-AF0F0F320643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7566FD1-6028-47CF-B449-AF0F0F320643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7566FD1-6028-47CF-B449-AF0F0F320643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7566FD1-6028-47CF-B449-AF0F0F320643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63AF223A-1B45-47D6-A23E-8C9F244B68FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63AF223A-1B45-47D6-A23E-8C9F244B68FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63AF223A-1B45-47D6-A23E-8C9F244B68FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63AF223A-1B45-47D6-A23E-8C9F244B68FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB593DAC-E9B5-41C3-B39B-019EB5F7D3C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB593DAC-E9B5-41C3-B39B-019EB5F7D3C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB593DAC-E9B5-41C3-B39B-019EB5F7D3C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB593DAC-E9B5-41C3-B39B-019EB5F7D3C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDCEB56E-1A54-467E-B295-39B009A5E335}
+	EndGlobalSection
+EndGlobal

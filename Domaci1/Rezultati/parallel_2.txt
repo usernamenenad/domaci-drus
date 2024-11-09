@@ -1,0 +1,6 @@
+Vrijeme izvršavanja broj 1: 19745 milisekundi.
+Vrijeme izvršavanja broj 2: 11084 milisekundi.
+Vrijeme izvršavanja broj 3: 6111 milisekundi.
+Vrijeme izvršavanja broj 4: 3805 milisekundi.
+Vrijeme izvršavanja broj 5: 4433 milisekundi.
+Prosječno vrijeme izvršavanja: 9035,6 milisekundi.

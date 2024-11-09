@@ -1,0 +1,14 @@
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\bin\Debug\net8.0\Domaci2.1.exe
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\bin\Debug\net8.0\Domaci2.1.deps.json
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\bin\Debug\net8.0\Domaci2.1.runtimeconfig.json
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\bin\Debug\net8.0\Domaci2.1.dll
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\bin\Debug\net8.0\Domaci2.1.pdb
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\obj\Debug\net8.0\Domaci2.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\obj\Debug\net8.0\Domaci2.1.AssemblyInfoInputs.cache
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\obj\Debug\net8.0\Domaci2.1.AssemblyInfo.cs
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\obj\Debug\net8.0\Domaci2.1.csproj.CoreCompileInputs.cache
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\obj\Debug\net8.0\Domaci2.1.dll
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\obj\Debug\net8.0\refint\Domaci2.1.dll
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\obj\Debug\net8.0\Domaci2.1.pdb
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\obj\Debug\net8.0\Domaci2.1.genruntimeconfig.cache
+C:\Users\neso\Desktop\Domaci2\Domaci2.1\obj\Debug\net8.0\ref\Domaci2.1.dll
