@@ -13,6 +13,8 @@ namespace Service
     {
         public delegate void OnNotifiedDelegate(int FirstNumber, int SecondNumber, Dictionary<int, Player> OrderedPlayers);
         public static event OnNotifiedDelegate OnNotifiedEvent;
+        
+        // Ne bi bilo loše zamijeniti bazom, mada iz jednostavnosti zadatka ostavljam rječnik.
         static Dictionary<int, Player> Players = new Dictionary<int, Player>();
 
         public void Publish(int FirstNumber, int SecondNumber)
@@ -26,13 +28,16 @@ namespace Service
 
         public void InitPlayer(Player player)
         {
-            ICallback callback = OperationContext.Current.GetCallbackChannel<ICallback>();
-            if(Players.ContainsKey(player.Credentials.Id))
+            // Ako se pojavi igrač sa istim Id-em, neće biti upisan!
+            // Međutim, klijent će ostati uvijek "zakopan" i čekaće zauvijek na event,
+            // iako nije registrovan ni na kakav.
+            // Rješenje - dodati i neki callback za Id.
+            if(!Players.ContainsKey(player.Credentials.Id))
             {
-                //
+                ICallback callback = OperationContext.Current.GetCallbackChannel<ICallback>();
+                Players.Add(player.Credentials.Id, player);
+                OnNotifiedEvent += callback.OnNotified;
             }
-            Players.Add(player.Credentials.Id, player);
-            OnNotifiedEvent += callback.OnNotified;
         }
 
         static void CalculateBalances(int FirstNumber, int SecondNumber) 
@@ -58,11 +63,15 @@ namespace Service
 
         static Dictionary<int, Player> OrderPlayers()
         {
-            return Players.OrderBy(kvp => kvp.Value.CurrentBalance).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            return Players.OrderByDescending(kvp => kvp.Value.CurrentBalance).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
         }
 
         static void CallbackPlayers(int FirstNumber, int SecondNumber, Dictionary<int, Player> OrderedPlayers)
         {
+            // Ovako eventujemo sve igrače i dajemo im čitavu rang listu, pa oni sami
+            // izvlače koji su. Da bi to uradili na serverskoj strani, ili ćemo za svakog igrača
+            // imati poseban event, ili uopšte nećemo koristiti eventove, već pozivati neku
+            // callback metodu. 
             OnNotifiedEvent?.Invoke(FirstNumber, SecondNumber, OrderedPlayers);
         }
     }

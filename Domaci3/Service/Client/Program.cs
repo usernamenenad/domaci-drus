@@ -30,26 +30,21 @@ namespace Client
             InitPlayer();
             Console.ReadLine();
         }
-
         static void InitPlayer()
         {
-            Console.WriteLine("Unesite ime...");
-            string? FirstName = Console.ReadLine();
+            string FirstName = "";
+            string LastName = "";
+            Validator.ValidateFirstAndLastName(FirstName, LastName);
 
-            Console.WriteLine("Unesite prezime...");
-            string? LastName = Console.ReadLine();
+            int Id = -1;
+            Validator.ValidateId(ref Id);
 
-            Console.WriteLine("Unesite vaš id");
-            int Id = int.Parse(Console.ReadLine());
+            int FirstNumber = -1;
+            int SecondNumber = -1;
+            Validator.ValidateFirstAndSecondNumber(ref FirstNumber, ref SecondNumber);
 
-            Console.WriteLine("Unesite prvi broj...");
-            int FirstNumber = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Unesite drugi broj...");
-            int SecondNumber = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Koliko ulažete novca...");
-            int InvestedMoney = int.Parse(Console.ReadLine());
+            int InvestedMoney = -1;
+            Validator.ValidateInvestedMoney(ref InvestedMoney);
 
             Player = new()
             {
