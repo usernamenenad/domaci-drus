@@ -337,7 +337,7 @@ namespace ServiceReference
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IPublisher))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost:55637/Service.svc/pub");
+                return new System.ServiceModel.EndpointAddress("http://localhost:57079/Service.svc/pub");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

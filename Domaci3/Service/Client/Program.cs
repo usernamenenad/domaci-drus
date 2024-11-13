@@ -5,13 +5,19 @@ namespace Client
 {
     class PlayerCallback : ISubscriberCallback
     {
+        // Traženje informacija na klijentskoj strani. Vjerovatno je bolje to odraditi na serveru, a da
+        // se "preko žice" samo prebace potrebno podaci, a ne svi igrači. Međutim, gubi smisao
+        // "Sub" dio "PubSub"-a, jer se samo obavještava svaki igrač pojedinačno, a ne svi odjednom.
         public void OnNotified(int FirstNumber, int SecondNumber, Dictionary<int, Player> OrderedPlayers)
         {
-            Console.WriteLine($"Prvi broj: {FirstNumber}!");
-            Console.WriteLine($"Drugi broj: {SecondNumber}!");
-
             int Rank = OrderedPlayers.Keys.ToList().IndexOf(Program.Player.Credentials.Id);
-            Console.WriteLine($"Istorijski plasman: {Rank}!");
+            Player Player = OrderedPlayers.Values.ToList()[Rank];
+
+            Console.WriteLine($"Brojevi na tiketu: {Player.Ticket.FirstNumber}, {Player.Ticket.SecondNumber}.");
+            Console.WriteLine($"Izvučeni brojevi na lotu: {FirstNumber}, {SecondNumber}.");
+            Console.WriteLine($"Uloženo: {Player.Ticket.InvestedMoney}.");
+            Console.WriteLine($"Trenutno stanje: {Player.CurrentBalance}");
+            Console.WriteLine($"Istorijski plasman: {Rank + 1}.");
 
             Console.WriteLine("-----------------------------");
         }
@@ -24,7 +30,7 @@ namespace Client
         {
             InstanceContext context = new(new PlayerCallback());
             WSDualHttpBinding binding = new();
-            EndpointAddress endpointAddress = new("http://localhost:55637/Service.svc/sub");
+            EndpointAddress endpointAddress = new("http://localhost:57079/Service.svc/sub");
             ServiceReference = new(context, binding, endpointAddress);
 
             InitPlayer();

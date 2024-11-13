@@ -1,7 +1,7 @@
 {
   "ExtendedData": {
     "inputs": [
-      "http://localhost:55637/Service.svc"
+      "http://localhost:57079/Service.svc"
     ],
     "collectionTypes": [
       "System.Array",

@@ -44,15 +44,21 @@ namespace Service
         { 
             foreach(Player player in Players.Values)
             {
+                List<int> LotoMachineNumbers = new List<int> { FirstNumber, SecondNumber };
                 int PlayerFirstNumber = player.Ticket.FirstNumber;
                 int PlayerSecondNumber = player.Ticket.SecondNumber;
 
-                if (PlayerFirstNumber == FirstNumber && PlayerSecondNumber == SecondNumber)
+                if (LotoMachineNumbers.Contains(PlayerFirstNumber))
                 {
-                    player.CurrentBalance += 5 * player.Ticket.InvestedMoney;
+                    if(LotoMachineNumbers.Contains(PlayerSecondNumber))
+                    {
+                        player.CurrentBalance += 5 * player.Ticket.InvestedMoney;
+                        continue;
+                    }
+                    player.CurrentBalance += player.Ticket.InvestedMoney;
                     continue;
                 }
-                if (PlayerFirstNumber == FirstNumber ^ PlayerSecondNumber == SecondNumber)
+                else if(LotoMachineNumbers.Contains(PlayerSecondNumber))
                 {
                     player.CurrentBalance += player.Ticket.InvestedMoney;
                     continue;

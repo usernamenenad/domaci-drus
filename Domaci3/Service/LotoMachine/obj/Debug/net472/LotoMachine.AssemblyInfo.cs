@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LotoMachine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63605f22236bf4bd5b6c5b27a3784e04217c70bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+398317805c36cd9f8414250323ca6caae16222e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("LotoMachine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LotoMachine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
