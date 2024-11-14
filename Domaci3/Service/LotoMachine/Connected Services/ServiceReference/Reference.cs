@@ -95,7 +95,7 @@ namespace ServiceReference
         
         private string FirstNameField;
         
-        private int IdField;
+        private int IdCardNumberField;
         
         private string LastNameField;
         
@@ -117,18 +117,18 @@ namespace ServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id
+        public int IdCardNumber
         {
             get
             {
-                return this.IdField;
+                return this.IdCardNumberField;
             }
             set
             {
-                if ((this.IdField.Equals(value) != true))
+                if ((this.IdCardNumberField.Equals(value) != true))
                 {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
+                    this.IdCardNumberField = value;
+                    this.RaisePropertyChanged("IdCardNumber");
                 }
             }
         }
@@ -235,6 +235,21 @@ namespace ServiceReference
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.2.0-preview1.23462.5")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Status", Namespace="http://schemas.datacontract.org/2004/07/Service")]
+    public enum Status : int
+    {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Success = 0,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        AlreadyRegistredFailure = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        CredentialsNotCorrectFailure = 2,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.2.0-preview1.23462.5")]
@@ -375,8 +390,11 @@ namespace ServiceReference
     public interface ISubscriberCallback
     {
         
-        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ISubscriber/OnNotified")]
-        void OnNotified(int FirstNumber, int SecondNumber, System.Collections.Generic.Dictionary<int, ServiceReference.Player> OrderedPlayers);
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ISubscriber/NotifyPlayer")]
+        void NotifyPlayer(int FirstNumber, int SecondNumber, int Rank, ServiceReference.Player player);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ISubscriber/RegistrationStatus")]
+        void RegistrationStatus(ServiceReference.Status status);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.2.0-preview1.23462.5")]
@@ -415,12 +433,12 @@ namespace ServiceReference
         }
     }
     
-    public class OnNotifiedReceivedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+    public class NotifyPlayerReceivedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
     {
         
         private object[] results;
         
-        public OnNotifiedReceivedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        public NotifyPlayerReceivedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState)
         {
             this.results = results;
@@ -444,12 +462,42 @@ namespace ServiceReference
             }
         }
         
-        public System.Collections.Generic.Dictionary<int, ServiceReference.Player> OrderedPlayers
+        public int Rank
         {
             get
             {
                 base.RaiseExceptionIfNecessary();
-                return ((System.Collections.Generic.Dictionary<int, ServiceReference.Player>)(this.results[2]));
+                return ((int)(this.results[2]));
+            }
+        }
+        
+        public ServiceReference.Player player
+        {
+            get
+            {
+                base.RaiseExceptionIfNecessary();
+                return ((ServiceReference.Player)(this.results[3]));
+            }
+        }
+    }
+    
+    public class RegistrationStatusReceivedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+    {
+        
+        private object[] results;
+        
+        public RegistrationStatusReceivedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState)
+        {
+            this.results = results;
+        }
+        
+        public ServiceReference.Status status
+        {
+            get
+            {
+                base.RaiseExceptionIfNecessary();
+                return ((ServiceReference.Status)(this.results[0]));
             }
         }
     }
@@ -468,14 +516,25 @@ namespace ServiceReference
             callbackImpl.Initialize(this);
         }
         
-        public event System.EventHandler<OnNotifiedReceivedEventArgs> OnNotifiedReceived;
+        public event System.EventHandler<NotifyPlayerReceivedEventArgs> NotifyPlayerReceived;
         
-        private void OnOnNotifiedReceived(object state)
+        public event System.EventHandler<RegistrationStatusReceivedEventArgs> RegistrationStatusReceived;
+        
+        private void OnNotifyPlayerReceived(object state)
         {
-            if ((this.OnNotifiedReceived != null))
+            if ((this.NotifyPlayerReceived != null))
             {
                 object[] results = ((object[])(state));
-                this.OnNotifiedReceived(this, new OnNotifiedReceivedEventArgs(results, null, false, null));
+                this.NotifyPlayerReceived(this, new NotifyPlayerReceivedEventArgs(results, null, false, null));
+            }
+        }
+        
+        private void OnRegistrationStatusReceived(object state)
+        {
+            if ((this.RegistrationStatusReceived != null))
+            {
+                object[] results = ((object[])(state));
+                this.RegistrationStatusReceived(this, new RegistrationStatusReceivedEventArgs(results, null, false, null));
             }
         }
         
@@ -489,12 +548,19 @@ namespace ServiceReference
                 this.proxy = proxy;
             }
             
-            public void OnNotified(int FirstNumber, int SecondNumber, System.Collections.Generic.Dictionary<int, ServiceReference.Player> OrderedPlayers)
+            public void NotifyPlayer(int FirstNumber, int SecondNumber, int Rank, ServiceReference.Player player)
             {
-                this.proxy.OnOnNotifiedReceived(new object[] {
+                this.proxy.OnNotifyPlayerReceived(new object[] {
                             FirstNumber,
                             SecondNumber,
-                            OrderedPlayers});
+                            Rank,
+                            player});
+            }
+            
+            public void RegistrationStatus(ServiceReference.Status status)
+            {
+                this.proxy.OnRegistrationStatusReceived(new object[] {
+                            status});
             }
         }
     }

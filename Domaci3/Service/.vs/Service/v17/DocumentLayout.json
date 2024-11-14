@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7566FD1-6028-47CF-B449-AF0F0F320643}|Service\\Service.csproj|c:\\users\\neso\\desktop\\files\\fakultet\\1. semestar\\distribuirani ra\u010Dunarski sistemi\\domaci\\domaci3\\service\\service\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7566FD1-6028-47CF-B449-AF0F0F320643}|Service\\Service.csproj|solutionrelative:service\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7566FD1-6028-47CF-B449-AF0F0F320643}|Service\\Service.csproj|c:\\users\\neso\\desktop\\files\\fakultet\\1. semestar\\distribuirani ra\u010Dunarski sistemi\\domaci\\domaci3\\service\\service\\service.svc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7566FD1-6028-47CF-B449-AF0F0F320643}|Service\\Service.csproj|solutionrelative:service\\service.svc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{63AF223A-1B45-47D6-A23E-8C9F244B68FA}|Client\\Client.csproj|c:\\users\\neso\\desktop\\files\\fakultet\\1. semestar\\distribuirani ra\u010Dunarski sistemi\\domaci\\domaci3\\service\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63AF223A-1B45-47D6-A23E-8C9F244B68FA}|Client\\Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,8 +11,20 @@
       "RelativeMoniker": "D:0:0:{63AF223A-1B45-47D6-A23E-8C9F244B68FA}|Client\\Client.csproj|solutionrelative:client\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63AF223A-1B45-47D6-A23E-8C9F244B68FA}|Client\\Client.csproj|c:\\users\\neso\\desktop\\files\\fakultet\\1. semestar\\distribuirani ra\u010Dunarski sistemi\\domaci\\domaci3\\service\\client\\connected services\\servicereference\\reference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63AF223A-1B45-47D6-A23E-8C9F244B68FA}|Client\\Client.csproj|solutionrelative:client\\connected services\\servicereference\\reference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DB593DAC-E9B5-41C3-B39B-019EB5F7D3C9}|LotoMachine\\LotoMachine.csproj|c:\\users\\neso\\desktop\\files\\fakultet\\1. semestar\\distribuirani ra\u010Dunarski sistemi\\domaci\\domaci3\\service\\lotomachine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB593DAC-E9B5-41C3-B39B-019EB5F7D3C9}|LotoMachine\\LotoMachine.csproj|solutionrelative:lotomachine\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7566FD1-6028-47CF-B449-AF0F0F320643}|Service\\Service.csproj|c:\\users\\neso\\desktop\\files\\fakultet\\1. semestar\\distribuirani ra\u010Dunarski sistemi\\domaci\\domaci3\\service\\service\\service.svc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7566FD1-6028-47CF-B449-AF0F0F320643}|Service\\Service.csproj|solutionrelative:service\\service.svc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7566FD1-6028-47CF-B449-AF0F0F320643}|Service\\Service.csproj|c:\\users\\neso\\desktop\\files\\fakultet\\1. semestar\\distribuirani ra\u010Dunarski sistemi\\domaci\\domaci3\\service\\service\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7566FD1-6028-47CF-B449-AF0F0F320643}|Service\\Service.csproj|solutionrelative:service\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7566FD1-6028-47CF-B449-AF0F0F320643}|Service\\Service.csproj|c:\\users\\neso\\desktop\\files\\fakultet\\1. semestar\\distribuirani ra\u010Dunarski sistemi\\domaci\\domaci3\\service\\service\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7566FD1-6028-47CF-B449-AF0F0F320643}|Service\\Service.csproj|solutionrelative:service\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Validator.cs",
+              "DocumentMoniker": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Client\\Validator.cs",
+              "RelativeDocumentMoniker": "Client\\Validator.cs",
+              "ToolTip": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Client\\Validator.cs",
+              "RelativeToolTip": "Client\\Validator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T18:24:57.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Client\\Program.cs",
+              "RelativeDocumentMoniker": "Client\\Program.cs",
+              "ToolTip": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Client\\Program.cs",
+              "RelativeToolTip": "Client\\Program.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAuwDwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T18:13:17.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "IService.cs",
               "DocumentMoniker": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Service\\IService.cs",
               "RelativeDocumentMoniker": "Service\\IService.cs",
               "ToolTip": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Service\\IService.cs",
               "RelativeToolTip": "Service\\IService.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAQwDQAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAkwFQAAAB9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:28:56.446Z",
+              "WhenOpened": "2024-11-14T18:06:41.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Client\\Program.cs",
-              "RelativeDocumentMoniker": "Client\\Program.cs",
-              "ToolTip": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Client\\Program.cs",
-              "RelativeToolTip": "Client\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\LotoMachine\\Program.cs",
+              "RelativeDocumentMoniker": "LotoMachine\\Program.cs",
+              "ToolTip": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\LotoMachine\\Program.cs",
+              "RelativeToolTip": "LotoMachine\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA5wAoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:25:06.925Z",
+              "WhenOpened": "2024-11-14T18:03:38.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Validator.cs",
+              "DocumentMoniker": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Service\\Validator.cs",
+              "RelativeDocumentMoniker": "Service\\Validator.cs",
+              "ToolTip": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Service\\Validator.cs",
+              "RelativeToolTip": "Service\\Validator.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T18:02:30.524Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Validator.cs",
-              "DocumentMoniker": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Client\\Validator.cs",
-              "RelativeDocumentMoniker": "Client\\Validator.cs",
-              "ToolTip": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Client\\Validator.cs",
-              "RelativeToolTip": "Client\\Validator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:25:01.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Reference.cs",
-              "DocumentMoniker": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Client\\Connected Services\\ServiceReference\\Reference.cs",
-              "RelativeDocumentMoniker": "Client\\Connected Services\\ServiceReference\\Reference.cs",
-              "ToolTip": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Client\\Connected Services\\ServiceReference\\Reference.cs",
-              "RelativeToolTip": "Client\\Connected Services\\ServiceReference\\Reference.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAUwF8AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:22:54.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Service.svc.cs",
               "DocumentMoniker": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Service\\Service.svc.cs",
               "RelativeDocumentMoniker": "Service\\Service.svc.cs",
               "ToolTip": "C:\\Users\\neso\\Desktop\\Files\\Fakultet\\1. SEMESTAR\\Distribuirani ra\u010Dunarski sistemi\\Domaci\\Domaci3\\Service\\Service\\Service.svc.cs",
               "RelativeToolTip": "Service\\Service.svc.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAkwCYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:18:45.517Z",
+              "WhenOpened": "2024-11-14T17:59:39.302Z",
               "EditorCaption": ""
             }
           ]

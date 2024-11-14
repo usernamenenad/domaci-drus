@@ -70,6 +70,7 @@
     <Compile Include="Service.svc.cs">
       <DependentUpon>Service.svc</DependentUpon>
     </Compile>
+    <Compile Include="Validator.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

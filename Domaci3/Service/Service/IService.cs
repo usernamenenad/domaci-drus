@@ -25,14 +25,17 @@ namespace Service
     public interface ICallback
     {
         [OperationContract(IsOneWay = true)]
-        void OnNotified(int FirstNumber, int SecondNumber, Dictionary<int, Player> OrderedPlayers);
+        void NotifyPlayer(int FirstNumber, int SecondNumber, int Rank, Player player);
+
+        [OperationContract(IsOneWay = true)]
+        void RegistrationStatus(Status status);
     }
 
     [DataContract]
     public class Credentials
     {
         [DataMember]
-        public int Id;
+        public int IdCardNumber;
 
         [DataMember]
         public string FirstName;
@@ -65,5 +68,24 @@ namespace Service
 
         [DataMember]
         public int CurrentBalance;
+    }
+
+    [DataContract]
+    public enum Status
+    {
+        // Ako je igrač "unikatan", uspješno će biti registrovan.
+        [EnumMember]
+        Success,
+
+        // Ako je igrač sa istim imenom, prezimenom i brojem lične karte već registovan,
+        // ne dozvoljava mu se uplata još jednog tiketa.
+        [EnumMember]
+        AlreadyRegistredFailure,
+
+        // Ako se igrač pokuša registrovati sa brojem lične karte koji je već registrovan, ali sa drugim imenom i prezimenom,
+        // tretira se kao maliciozan pokušaj registracije na "nečije ime", te se "ubija" proces koji
+        // se pokušao pretplatiti.
+        [EnumMember]
+        CredentialsNotCorrectFailure
     }
 }

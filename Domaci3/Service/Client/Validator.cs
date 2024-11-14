@@ -8,7 +8,7 @@ namespace Client
 {
     internal class Validator
     {
-        public static void ValidateFirstAndLastName(string FirstName, string LastName)
+        public static void ValidateFirstAndLastName(ref string FirstName, ref string LastName)
         {
             // Validacija za ime
             Console.WriteLine("------------------------");
@@ -34,17 +34,19 @@ namespace Client
             }
         }
 
-        public static void ValidateId(ref int Id)
+        public static void ValidateIdCardNumber(ref int IdCardNumber)
         {
             // Validacija za Id
             Console.WriteLine("------------------------");
-            Console.WriteLine("Unesite Id...");
+            Console.WriteLine("Unesite broj lične karte...");
             while (true)
             {
                 string Str = Console.ReadLine();
-                if(ValidateIsInt(Str, ref Id))
+                if(ValidateIsInt(Str, ref IdCardNumber))
                 {
-                    if(ValidateIsIntInLimits(Id, 0, int.MaxValue))
+                    // Pretpostavimo da broj lične karte može samo biti numerički
+                    // i između 0 i 10000
+                    if(ValidateIsIntInLimits(IdCardNumber, 0, 10000))
                     {
                         break;
                     }
@@ -102,7 +104,7 @@ namespace Client
                 }
             }
         }
-        static bool ValidateString(ref string Str)
+        private static bool ValidateString(ref string Str)
         {
             if(Str is null || Str.Count() == 0)
             {
@@ -114,7 +116,7 @@ namespace Client
             return true;
         }
 
-        static bool ValidateIsInt(string Str, ref int Num)
+        private static bool ValidateIsInt(string Str, ref int Num)
         {
             if (!int.TryParse(Str, out Num)) 
             {
@@ -126,7 +128,7 @@ namespace Client
             return true;
         }
 
-        static bool ValidateIsIntInLimits(int Num, int LowerLimit, int UpperLimit)
+        private static bool ValidateIsIntInLimits(int Num, int LowerLimit, int UpperLimit)
         {
             if(Num < LowerLimit || Num > UpperLimit)
             {

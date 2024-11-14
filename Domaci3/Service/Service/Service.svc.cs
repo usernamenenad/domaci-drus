@@ -11,38 +11,57 @@ namespace Service
 {
     public class Service : IPublisher, ISubscriber
     {
-        public delegate void OnNotifiedDelegate(int FirstNumber, int SecondNumber, Dictionary<int, Player> OrderedPlayers);
+        public delegate void OnNotifiedDelegate(int FirstNumber, int SecondNumber);
         public static event OnNotifiedDelegate OnNotifiedEvent;
         
         // Ne bi bilo loše zamijeniti bazom, mada iz jednostavnosti zadatka ostavljam rječnik.
-        static Dictionary<int, Player> Players = new Dictionary<int, Player>();
+        static Dictionary<int, (Player, ICallback)> Players = new Dictionary<int, (Player, ICallback)>();
+        public static bool FirstCall = false;
+
+        public Service()
+        {
+            if(!FirstCall)
+            {
+                OnNotifiedEvent += CallbackPlayers;
+                FirstCall = true;
+            }
+        }
 
         public void Publish(int FirstNumber, int SecondNumber)
         {
             if (Players.Any())
             {
-                CalculateBalances(FirstNumber, SecondNumber);
-                CallbackPlayers(FirstNumber, SecondNumber, OrderPlayers());
+                OnNotifiedEvent?.Invoke(FirstNumber, SecondNumber);
             }
         }
 
         public void InitPlayer(Player player)
         {
-            // Ako se pojavi igrač sa istim Id-em, neće biti upisan!
-            // Međutim, klijent će ostati uvijek "zakopan" i čekaće zauvijek na event,
-            // iako nije registrovan ni na kakav.
-            // Rješenje - dodati i neki callback za Id.
-            if(!Players.ContainsKey(player.Credentials.Id))
+            ICallback callback = OperationContext.Current.GetCallbackChannel<ICallback>();
+
+            if (Players.ContainsKey(player.Credentials.IdCardNumber))
             {
-                ICallback callback = OperationContext.Current.GetCallbackChannel<ICallback>();
-                Players.Add(player.Credentials.Id, player);
-                OnNotifiedEvent += callback.OnNotified;
+                bool isRightPlayer = Validator.CheckCredentials(player, Players);
+                if (!isRightPlayer)
+                {
+                    callback.RegistrationStatus(Status.CredentialsNotCorrectFailure);
+                    return;
+                }
+
+                Players[player.Credentials.IdCardNumber] = (Players[player.Credentials.IdCardNumber].Item1, callback);
+                callback.RegistrationStatus(Status.AlreadyRegistredFailure);
+                return;
             }
+
+            Players.Add(player.Credentials.IdCardNumber, (player, callback));
+            callback.RegistrationStatus(Status.Success);
+            return;
+
         }
 
         static void CalculateBalances(int FirstNumber, int SecondNumber) 
         { 
-            foreach(Player player in Players.Values)
+            foreach((Player player, _) in Players.Values)
             {
                 List<int> LotoMachineNumbers = new List<int> { FirstNumber, SecondNumber };
                 int PlayerFirstNumber = player.Ticket.FirstNumber;
@@ -67,18 +86,21 @@ namespace Service
             }
         }
 
-        static Dictionary<int, Player> OrderPlayers()
+        static List<(Player, ICallback)> OrderPlayers()
         {
-            return Players.OrderByDescending(kvp => kvp.Value.CurrentBalance).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            return Players.OrderByDescending(kvp => kvp.Value.Item1.CurrentBalance).Select(kvp => kvp.Value).ToList();
         }
 
-        static void CallbackPlayers(int FirstNumber, int SecondNumber, Dictionary<int, Player> OrderedPlayers)
+        static void CallbackPlayers(int FirstNumber, int SecondNumber)
         {
-            // Ovako eventujemo sve igrače i dajemo im čitavu rang listu, pa oni sami
-            // izvlače koji su. Da bi to uradili na serverskoj strani, ili ćemo za svakog igrača
-            // imati poseban event, ili uopšte nećemo koristiti eventove, već pozivati neku
-            // callback metodu. 
-            OnNotifiedEvent?.Invoke(FirstNumber, SecondNumber, OrderedPlayers);
+            CalculateBalances(FirstNumber, SecondNumber);
+            List<(Player, ICallback)> OrderedPlayers = OrderPlayers();
+
+            for (int i = 0; i < OrderedPlayers.Count; i++)
+            {
+                (Player player, ICallback callback) = OrderedPlayers[i];
+                callback.NotifyPlayer(FirstNumber, SecondNumber, i + 1, player);
+            }
         }
     }
 }

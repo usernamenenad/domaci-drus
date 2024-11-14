@@ -1,31 +1,55 @@
 ﻿using ServiceReference;
+using System.Diagnostics;
 using System.ServiceModel;
 
 namespace Client
 {
     class PlayerCallback : ISubscriberCallback
     {
-        // Traženje informacija na klijentskoj strani. Vjerovatno je bolje to odraditi na serveru, a da
-        // se "preko žice" samo prebace potrebno podaci, a ne svi igrači. Međutim, gubi smisao
-        // "Sub" dio "PubSub"-a, jer se samo obavještava svaki igrač pojedinačno, a ne svi odjednom.
-        public void OnNotified(int FirstNumber, int SecondNumber, Dictionary<int, Player> OrderedPlayers)
+        // Sa servera stiže podatak o istorijskom plasmanu igrača, kao i sam igrač iz čije instance se izvlače podacic
+        // o trenutnom stanju na računu.
+        public void NotifyPlayer(int FirstNumber, int SecondNumber, int Rank, Player player)
         {
-            int Rank = OrderedPlayers.Keys.ToList().IndexOf(Program.Player.Credentials.Id);
-            Player Player = OrderedPlayers.Values.ToList()[Rank];
-
-            Console.WriteLine($"Brojevi na tiketu: {Player.Ticket.FirstNumber}, {Player.Ticket.SecondNumber}.");
+            Console.WriteLine($"Brojevi na tiketu: {player.Ticket.FirstNumber}, {player.Ticket.SecondNumber}.");
             Console.WriteLine($"Izvučeni brojevi na lotu: {FirstNumber}, {SecondNumber}.");
-            Console.WriteLine($"Uloženo: {Player.Ticket.InvestedMoney}.");
-            Console.WriteLine($"Trenutno stanje: {Player.CurrentBalance}");
-            Console.WriteLine($"Istorijski plasman: {Rank + 1}.");
+            Console.WriteLine($"Uloženo: {player.Ticket.InvestedMoney}.");
+            Console.WriteLine($"Trenutno stanje: {player.CurrentBalance}");
+            Console.WriteLine($"Istorijski plasman: {Rank}.");
 
             Console.WriteLine("-----------------------------");
+        }
+
+        // Callback metoda koja služi za provjeru pri preplaćivanju igrača na igru.
+        // Više o ovome u Service.Status enum klasi.
+        public void RegistrationStatus(Status status)
+        {
+            switch (status) 
+            {
+                case Status.Success:
+                    Console.WriteLine("-----------------------------");
+                    Console.WriteLine("Igrač uspješno registrovan!");
+                    Console.WriteLine("-----------------------------");
+                    break;
+
+                case Status.AlreadyRegistredFailure:
+                    Console.WriteLine("-----------------------------");
+                    Console.WriteLine("Igrač je već uplatio tiket!");
+                    Console.WriteLine("-----------------------------");
+                    break;
+
+                case Status.CredentialsNotCorrectFailure:
+                    Console.WriteLine("-----------------------------");
+                    Console.WriteLine("Lažni kredencijali! Igrač ne može igrati igru!");
+                    Console.WriteLine("-----------------------------");
+                    Thread.Sleep(2000);
+                    Environment.Exit(0);
+                break;
+            }
         }
     }
     internal class Program
     {
         static SubscriberClientBase? ServiceReference;
-        public static Player? Player;
         static void Main(string[] args)
         {
             InstanceContext context = new(new PlayerCallback());
@@ -40,10 +64,10 @@ namespace Client
         {
             string FirstName = "";
             string LastName = "";
-            Validator.ValidateFirstAndLastName(FirstName, LastName);
+            Validator.ValidateFirstAndLastName(ref FirstName, ref LastName);
 
-            int Id = -1;
-            Validator.ValidateId(ref Id);
+            int IdCardNumber = -1;
+            Validator.ValidateIdCardNumber(ref IdCardNumber);
 
             int FirstNumber = -1;
             int SecondNumber = -1;
@@ -52,11 +76,11 @@ namespace Client
             int InvestedMoney = -1;
             Validator.ValidateInvestedMoney(ref InvestedMoney);
 
-            Player = new()
+            Player p = new()
             {
                 Credentials = new()
                 {
-                    Id = Id,
+                    IdCardNumber = IdCardNumber,
                     FirstName = FirstName,
                     LastName = LastName
                 },
@@ -69,7 +93,7 @@ namespace Client
                 CurrentBalance = 0
             };
 
-            ServiceReference?.InitPlayer(Player);
+            ServiceReference?.InitPlayer(p);
         }
     }
 }
